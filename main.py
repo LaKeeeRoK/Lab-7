@@ -51,5 +51,5 @@ def plot3d():
 if __name__ == '__main__':
     #start()
     #tableLoad()
-    #hist()
+    hist()
     plot3d()

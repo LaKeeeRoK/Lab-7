@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import time
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 list1 = [random.random() for _ in range(1000000)]
 list2 = [random.random() for _ in range(1000000)]
@@ -20,9 +21,27 @@ result_array = np.multiply(array1, array2)
 end_time = time.perf_counter()
 print("Время выполнения перемножения массивов NumPy:", end_time - start_time)
 
-
+##########################################
 
 data = pd.read_csv("data2.csv")
-plt.hist(data["ph"], bins=50, label="histogram for task 2")
+plt.hist(data["ph"], bins=50, label="histogram for task 2", )
 plt.show()
 
+################################
+
+
+def plot3d():
+    x = np.linspace(-2*np.pi, 2*np.pi, 100)
+    y = np.sin(x) * np.cos(x)
+    z = np.sin(x) * np.cos(x)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.plot(x, y, z)
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    ax.set_title('3D Plot')
+    plt.show()
+
+plot3d()
