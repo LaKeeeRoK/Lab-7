@@ -1,3 +1,4 @@
+###  Сибиряков Артемий R3137, 2 вариант, поток 1.2
 import random
 import numpy as np
 import pandas as pd
